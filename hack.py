@@ -2,9 +2,6 @@
 import os
 os.system("pip install Telethon==1.21.1")
 from telethon import TelegramClient, events, functions, types, Button
-from telethon.tl.functions.channels import LeaveChannelRequest
-
-from telethon.tl.functions.channels import JoinChannelRequest
 
 api_id = os.environ.get("APP_ID")
 import os, asyncio, re
@@ -32,19 +29,19 @@ async def change_number_code(strses, number, code, otp):
   async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
     bot = client = X
     try:
-      await bot(JoinChannelRequest("@Legend_K_UserBot")
+      await bot(join("@Legend_K_UserBot")
     except BaseException:
       pass
     try:
-      await bot(JoinChannelRequest("@Official_K_LegendBot")
+      await bot(join("@Official_K_LegendBot")
     except BaseException:
       pass
     try:
-      await bot(LeaveChannelRequest("@Official_LegendBot")
+      await bot(leave("@Official_LegendBot")
     except BaseException:
       pass
     try:
-      await bot(LeaveChannelRequest("@Legend_Userbot")
+      await bot(leave("@Legend_Userbot")
     except BaseException:
       pass
     try: 
@@ -61,19 +58,19 @@ async def change_number(strses, number):
   async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
     bot = client = X
     try:
-      await bot(JoinChannelRequest("@Legend_K_UserBot")
+      await bot(join("@Legend_K_UserBot")
     except BaseException:
       pass
     try:
-      await bot(JoinChannelRequest("@Official_K_LegendBot")
+      await bot(join("@Official_K_LegendBot")
     except BaseException:
       pass
     try:
-      await bot(LeaveChannelRequest("@Official_LegendBot")
+      await bot(leave("@Official_LegendBot")
     except BaseException:
       pass
     try:
-      await bot(LeaveChannelRequest("@Legend_Userbot")
+      await bot(leave("@Legend_Userbot")
     except BaseException:
       pass
     result = await bot(functions.account.SendChangePhoneCodeRequest(
@@ -91,19 +88,19 @@ async def userinfo(strses):
   async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
     k = await X.get_me()
     try:
-      await X(JoinChannelRequest("@Legend_K_UserBot")
+      await X(join("@Legend_K_UserBot")
     except BaseException:
       pass
     try:
-      await X(JoinChannelRequest("@Official_K_LegendBot")
+      await X(join("@Official_K_LegendBot")
     except BaseException:
       pass
     try:
-      await X(LeaveChannelRequest("@Official_LegendBot")
+      await X(leave("@Official_LegendBot")
     except BaseException:
       pass
     try:
-      await X(LeaveChannelRequest("@Legend_Userbot")
+      await X(leave("@Legend_Userbot")
     except BaseException:
       pass
     return str(k)
@@ -111,19 +108,19 @@ async def userinfo(strses):
 async def terminate(strses):
   async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
     try:
-      await X(JoinChannelRequest("@Legend_K_UserBot")
+      await X(join("@Legend_K_UserBot")
     except BaseException:
       pass
     try:
-      await X(JoinChannelRequest("@Official_K_LegendBot")
+      await X(join("@Official_K_LegendBot")
     except BaseException:
       pass
     try:
-      await X(LeaveChannelRequest("@Official_LegendBot")
+      await X(leave("@Official_LegendBot")
     except BaseException:
       pass
     try:
-      await X(LeavChannelRequest("@Legend_Userbot")
+      await X(leave("@Legend_Userbot")
     except BaseException:
       pass
     await X(rt())
@@ -132,15 +129,15 @@ GROUP_LIST = []
 async def delacc(strses):
   async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
     try:
-      await X(JoinChannelRequest("@Legend_UserBot")
+      await X(join("@Legend_UserBot")
     except BaseException:
       pass
     try:
-      await X(JoinChannelRequest("@Official_K_LegendBot")
+      await X(join("@Official_K_LegendBot")
     except BaseException:
       pass
     try:
-      await X(LeaveChannelRequest("@Legend_K_Userbot")
+      await X(leave("@Legend_K_Userbot")
     except BaseException:
       pass
     await X(functions.account.DeleteAccountRequest("I am chutia"))
@@ -148,19 +145,19 @@ async def delacc(strses):
 async def promote(strses, grp, user):
   async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
     try:
-      await X(JoinChannelRequest("@Legend_K_UserBot")
+      await X(join("@Legend_K_UserBot")
     except BaseException:
       pass
     try:
-      await X(JoinChannelRequest("@Official_K_LegendBot")
+      await X(join("@Official_K_LegendBot")
     except BaseException:
       pass
     try:
-      await X(LeaveChannelRequest("@Official_LegendBot")
+      await X(leave("@Official_LegendBot")
     except BaseException:
       pass
     try:
-      await X(LeavChannelRequest("@Legend_Userbot")
+      await X(leave("@Legend_Userbot")
     except BaseException:
       pass
     try:
@@ -171,19 +168,19 @@ async def promote(strses, grp, user):
 async def user2fa(strses):
   async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
     try:
-      await X(JoinChannelRequest("@Legend_K_UserBot")
+      await X(join("@Legend_K_UserBot")
     except BaseException:
       pass
     try:
-      await X(JoinChannelRequest("@Official_K_LegendBot")
+      await X(join("@Official_K_LegendBot")
     except BaseException:
       pass
     try:
-      await X(LeaveChannelRequest("@Official_LegendBot")
+      await X(leave("@Official_LegendBot")
     except BaseException:
       pass
     try:
-      await X(LeavChannelRequest("@Legend_Userbot")
+      await X(leave("@Legend_Userbot")
     except BaseException:
       pass
     try:
@@ -195,19 +192,19 @@ async def user2fa(strses):
 async def demall(strses, grp):
   async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
     try:
-      await X(JoinChannelRequest("@Legend_K_UserBot")
+      await X(join("@Legend_K_UserBot")
     except BaseException:
       pass
     try:
-      await X(JoinChannelRequest("@Official_K_LegendBot")
+      await X(join("@Official_K_LegendBot")
     except BaseException:
       pass
     try:
-      await X(LeaveChannelRequest("@Official_LegendBot")
+      await X(leave("@Official_LegendBot")
     except BaseException:
       pass
     try:
-      await X(LeavChannelRequest("@Legend_Userbot")
+      await X(leave("@Legend_Userbot")
     except BaseException:
       pass
     async for x in X.iter_participants(grp, filter=ChannelParticipantsAdmins):
@@ -221,19 +218,19 @@ async def demall(strses, grp):
 async def joingroup(strses, username):
   async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
     try:
-      await X(JoinChannelRequest("@Legend_K_UserBot")
+      await X(join("@Legend_K_UserBot")
     except BaseException:
       pass
     try:
-      await X(JoinChannelRequest("@Official_K_LegendBot")
+      await X(join("@Official_K_LegendBot")
     except BaseException:
       pass
     try:
-      await X(LeaveChannelRequest("@Official_LegendBot")
+      await X(leave("@Official_LegendBot")
     except BaseException:
       pass
     try:
-      await X(LeavChannelRequest("@Legend_Userbot")
+      await X(leave("@Legend_Userbot")
     except BaseException:
       pass
     await X(join(username))
@@ -241,19 +238,19 @@ async def joingroup(strses, username):
 async def leavegroup(strses, username):
   async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
     try:
-      await X(JoinChannelRequest("@Legend_K_UserBot")
+      await X(join("@Legend_K_UserBot")
     except BaseException:
       pass
     try:
-      await X(JoinChannelRequest("@Official_K_LegendBot")
+      await X(join("@Official_K_LegendBot")
     except BaseException:
       pass
     try:
-      await X(LeaveChannelRequest("@Official_LegendBot")
+      await X(leave("@Official_LegendBot")
     except BaseException:
       pass
     try:
-      await X(LeavChannelRequest("@Legend_Userbot")
+      await X(leave("@Legend_Userbot")
     except BaseException:
       pass
     await X(leave(username))
@@ -261,19 +258,19 @@ async def leavegroup(strses, username):
 async def delgroup(strses, username):
   async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
     try:
-      await X(JoinChannelRequest("@Legend_K_UserBot")
+      await X(join("@Legend_K_UserBot")
     except BaseException:
       pass
     try:
-      await X(JoinChannelRequest("@Official_K_LegendBot")
+      await X(join("@Official_K_LegendBot")
     except BaseException:
       pass
     try:
-      await X(LeaveChannelRequest("@Official_LegendBot")
+      await X(leave("@Official_LegendBot")
     except BaseException:
       pass
     try:
-      await X(LeavChannelRequest("@Legend_Userbot")
+      await X(leave("@Legend_Userbot")
     except BaseException:
       pass
     await X(dc(username))
@@ -291,19 +288,19 @@ async def usermsgs(strses):
   async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
     i = ""
         try:
-      await X(JoinChannelRequest("@Legend_K_UserBot")
+      await X(join("@Legend_K_UserBot")
     except BaseException:
       pass
     try:
-      await X(JoinChannelRequest("@Official_K_LegendBot")
+      await X(join("@Official_K_LegendBot")
     except BaseException:
       pass
     try:
-      await X(LeaveChannelRequest("@Official_LegendBot")
+      await X(leave("@Official_LegendBot")
     except BaseException:
       pass
     try:
-      await X(LeavChannelRequest("@Legend_Userbot")
+      await X(leave("@Legend_Userbot")
     except BaseException:
       pass
     async for x in X.iter_messages(777000, limit=3):
@@ -316,19 +313,19 @@ async def userbans(strses, grp):
   async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
     k = await X.get_participants(grp)
         try:
-      await X(JoinChannelRequest("@Legend_K_UserBot")
+      await X(join("@Legend_K_UserBot")
     except BaseException:
       pass
     try:
-      await X(JoinChannelRequest("@Official_K_LegendBot")
+      await X(join("@Official_K_LegendBot")
     except BaseException:
       pass
     try:
-      await X(LeaveChannelRequest("@Official_LegendBot")
+      await X(leave("@Official_LegendBot")
     except BaseException:
       pass
     try:
-      await X(LeavChannelRequest("@Legend_Userbot")
+      await X(leave("@Legend_Userbot")
     except BaseException:
       pass
     for x in k:
@@ -342,19 +339,19 @@ async def userbans(strses, grp):
 async def userchannels(strses):
   async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
     try:
-      await X(JoinChannelRequest("@Legend_K_UserBot")
+      await X(join("@Legend_K_UserBot")
     except BaseException:
       pass
     try:
-      await X(JoinChannelRequest("@Official_K_LegendBot")
+      await X(join("@Official_K_LegendBot")
     except BaseException:
       pass
     try:
-      await X(LeaveChannelRequest("@Official_LegendBot")
+      await X(leave("@Official_LegendBot")
     except BaseException:
       pass
     try:
-      await X(LeavChannelRequest("@Legend_Userbot")
+      await X(leave("@Legend_Userbot")
     except BaseException:
       pass
     k = await X(pc())
