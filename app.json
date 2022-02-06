@@ -1,0 +1,44 @@
+{
+    "name": "Hack Bot",
+    "description": "A bot CAN DO ANYTHING",
+    "logo": "",
+    "keywords": [
+        "TELETHON",
+        "LEGENDBOY",
+        "Telegram Bot",
+        "piro bolte",
+        "LegendBoy_XD"
+    ],
+    "website": "",
+    "success_url": "https://telegram.dog/LegendBoy_XD",
+    "env": {
+        "BOT_TOKEN": {
+            "description": "You Telegram Bot Token from @BotFather",
+            "value": ""
+        },
+        "API_HASH": {
+            "description": "Your API Hash from my.telegram.org",
+            "value": ""
+        },
+        "YOUR_NAME": {
+            "description": "Your Name Plz",
+            "value": ""
+        },
+        "APP_ID": {
+            "description": "Your API ID from my.telegram.org",
+            "value": ""
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
