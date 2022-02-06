@@ -1,9 +1,6 @@
-Powered By @Its_LegendBoy
+# Powered By @LegendBot_XD
 
-⚠️Warning
-I am not responsible of ur WhatsApp ID ban
+## ⚠️ Note : Dont Try To Missuse This Repo
 
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FLEGEND-OS%2FHACKBOT&template=https%3A%2F%2Fgithub.com%2FLEGEND-OS%2FHACKBOT)
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-
-[Github](https://github.com/LEGEND-OS)
